@@ -1,0 +1,148 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+#fractionInput {
+    width: calc(100% - 140px);
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.primary-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.primary-btn:hover {
+    background-color: #45a049;
+}
+
+#circlesContainer {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.circle-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #e6e6e6;
+}
+
+  
+.section {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: lightgray;
+    border: 1px solid #333;
+    cursor: pointer;
+    transform-origin: bottom right;
+}
+
+.section.colored {
+    background-color: orange;
+}
+
+.circle-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle-controls button {
+    margin: 5px;
+    padding: 8px;
+    width: 130px;
+    border: none;
+    border-radius: 4px;
+    background-color: #008CBA;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.circle-controls button:hover {
+    background-color: #007bb5;
+}
+
+#scoreContainer {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+const style = document.createElement('style');
+style.textContent = `
+  .circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #333;
+    background-color: #e6e6e6;
+  }
+  .section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0 0;
+    border: 1px solid #333;
+    background-color: lightgray;
+    cursor: pointer;
+  }
+  .section.colored {
+    background-color: orange;
+  }
+`;
+document.head.appendChild(style);
